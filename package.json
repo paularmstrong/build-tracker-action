@@ -1,0 +1,28 @@
+{
+  "name": "@build-tracker/action",
+  "version": "1.0.0",
+  "description": "Github action for Build Tracker",
+  "repository": "git@github.com:paularmstrong/build-tracker-action.git",
+  "author": "Paul Armstrong <paul@spaceyak.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "lint": "yarn lint:cmd --fix",
+    "lint:ci": "yarn lint:cmd",
+    "lint:cmd": "eslint . --ext '.js,.md' --cache"
+  },
+  "dependencies": {
+    "@build-tracker/cli": "^1.0.0-alpha.1",
+    "actions-toolkit": "^2.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-header": "^3.0.0",
+    "eslint-plugin-markdown": "^1.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "husky": "^2.3.0",
+    "lint-staged": "^8.1.7",
+    "prettier": "^1.17.1"
+  }
+}
