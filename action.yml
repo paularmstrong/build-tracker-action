@@ -1,0 +1,26 @@
+name: 'build-tracker-action'
+description: 'Upload to your Build Tracker instance and report in your PRs'
+author: 'Paul Armstrong'
+branding:
+  icon: 'archive'
+  color: 'purple'
+inputs:
+  GITHUB_TOKEN:
+    description: 'The GITHUB_TOKEN secret'
+    required: true
+  BT_CLI_CONFIG:
+    description: 'The location to your CLI build-tracker.config.js'
+  BT_API_AUTH_TOKEN:
+    description: 'Secret API auth token'
+  BT_COLLAPSE_TABLE:
+    description: 'Collapse the table output'
+    default: true
+  BT_FILTER_TABLE_ROWS:
+    description: 'Filter out rows that do not have errors or warnings'
+    default: false
+  BT_FAIL_ON_ERROR:
+    description: 'Fail builds on budget failures'
+    default: true
+runs:
+  using: 'node12'
+  main: 'index.js'

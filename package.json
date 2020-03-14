@@ -1,0 +1,18 @@
+{
+  "name": "@build-tracker/action",
+  "version": "1.0.0",
+  "description": "Github action for Build Tracker",
+  "repository": "git@github.com:paularmstrong/build-tracker-action.git",
+  "author": "Paul Armstrong <paul@spaceyak.com>",
+  "license": "MIT",
+  "main": "./index.js",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "@actions/core": "^1.2.3",
+    "@actions/exec": "^1.0.3",
+    "@actions/github": "^2.1.1",
+    "@build-tracker/api-client": "^1.0.0-beta.11",
+    "@build-tracker/comparator": "^1.0.0-beta.10"
+  }
+}
