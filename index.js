@@ -19,6 +19,8 @@ async function getBooleanConfig(name) {
 }
 
 async function run(octokit, context) {
+  console.log(JSON.stringify(context, null, 2));
+  throw new Error('on purpose');
   const { owner, repo, number } = context.issue;
   const {
     base: { sha: parentRevision },
