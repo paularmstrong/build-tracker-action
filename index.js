@@ -77,8 +77,8 @@ async function maybeAddComment(config, octokit, context, apiResponse, commentCon
   }
 
   const revisions = comparator.builds.map((build) => build.getMetaValue('revision'));
-  const collapseTable = await getBooleanConfig('BT_COLLAPSE_TABLE');
-  const filterRows = await getBooleanConfig('BT_FILTER_TABLE_ROWS');
+  const collapseTable = await getBooleanConfig('BT_COMMENT_COLLAPSE_TABLE');
+  const filterRows = await getBooleanConfig('BT_COMMENT_FILTER_TABLE_ROWS');
 
   const commentInfo = getCommentInfo(context);
   const comment = {
