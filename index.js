@@ -162,10 +162,11 @@ async function getPreviousComment(octokit, context) {
 }
 
 async function maybeDeleteComment(config, octokit, context, apiResponse, commentConfig) {
-  const commentInfo = getCommentInfo(context);
-  if (!commentInfo) {
+  const commentId = await getPreviousComment(octokit, context);
+  if (!commentId) {
     return;
   }
+  const commentInfo = getCommentInfo(context);
 
   startGroup('Deleting previous comment');
   await octokit.issues.deleteComment({
