@@ -9,7 +9,7 @@
   "private": true,
   "dependencies": {},
   "devDependencies": {
-    "@actions/core": "^1.2.3",
+    "@actions/core": "^1.9.1",
     "@actions/exec": "^1.0.3",
     "@actions/github": "^2.1.1",
     "@build-tracker/api-client": "^1.0.0-beta.11",
